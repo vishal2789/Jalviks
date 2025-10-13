@@ -8,7 +8,7 @@ export default function App() {
     useEffect(() => {
       const timer = setTimeout(() => {
         router.push("/Step1Screen"); // go to Step1 after 5s
-      }, 5000);
+      }, 2000);
       return () => clearTimeout(timer);
     }, []);
   

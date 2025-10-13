@@ -1,5 +1,5 @@
 // app/screens/FarmTaskScreen.jsx
-import { Ionicons } from "@expo/vector-icons";
+import { Feather, Ionicons } from "@expo/vector-icons";
 import React, { useState } from "react";
 import { FlatList, Text, TouchableOpacity, View } from "react-native";
 import CommonTitleBox from "../components/CommonTitleBox";
@@ -43,13 +43,13 @@ export default function FarmTaskScreen() {
     return (
       <TouchableOpacity
         onPress={() => setSelectedId(item.id)}
-        className={`flex-row items-start justify-between p-5 rounded-xl mb-3 border 
+        className={`flex-row items-start justify-between p-5 rounded-xl my-3 border 
         ${isSelected ? "bg-[#EDFCFF] border-[#8CC5CF]" : "bg-white border-[#BDE0E6]"}`}
       >
         {/* Left section with radio and text */}
         <View className="flex-row items-start flex-1 relative">
           <View
-            className={`w-7 h-7 rounded-full mt-1 mr-3 border-1 flex-row items-center justify-center ${
+            className={`w-7 h-7 rounded-full mt-1 mr-5 border-1 flex-row items-center justify-center ${
               isSelected ? "border-[#0077B6] bg-[#0077B6]" : "border-[#EEEEEE] bg-[#DDDDDD]"
             }`}
           >
@@ -60,11 +60,7 @@ export default function FarmTaskScreen() {
 
           {/* Task details */}
           <View className="flex-1">
-            <Text
-              className={`text-xl font-nunitosans-bold ${
-                isSelected ? "text-blue-800" : "text-gray-800"
-              }`}
-            >
+            <Text className={'text-xl font-nunitosans-bold text-black tracking-wider'} >
               {item.title}
             </Text>
             <Text className="text-lg text-gray-500 mt-1  font-nunitosans-regular">
@@ -74,11 +70,8 @@ export default function FarmTaskScreen() {
         </View>
 
         {/* Arrow icon */}
-        <Ionicons
-          name="arrow-forward-outline"
-          size={18}
-          color={isSelected ? "#2563eb" : "#9ca3af"}
-        />
+        
+        <Feather className="ml-5" name="arrow-up-right" size={24} color={isSelected ? "#2563eb" : "#9ca3af"} />
       </TouchableOpacity>
     );
   };
@@ -109,7 +102,7 @@ export default function FarmTaskScreen() {
           <TouchableOpacity
             key={tab.key}
             onPress={() => setFilter(tab.key)}
-            className={`px-4 py-5 rounded-full flex-1 ${
+            className={`px-3 py-4 mx-2 rounded-full flex-1 ${
               filter === tab.key ? "bg-[#0077B6]" : "bg-[#E5EAFC]"
             }`}
           >
