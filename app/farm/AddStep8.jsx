@@ -120,7 +120,7 @@ const AddStep8 = () => {
                 shadowOpacity: 0.3,
                 shadowRadius: 7.84,
             }}
-            >
+            > 
               {diseases.map((disease, index) => {
                 const selected = selectedDiseases.includes(disease);
                 return (
