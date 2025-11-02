@@ -1,4 +1,5 @@
 import { Ionicons } from "@expo/vector-icons";
+import { router } from "expo-router";
 import { ScrollView, Text, TouchableOpacity, View } from "react-native";
 import CommonTitleBox from "../components/CommonTitleBox";
 import GradientButton from "../components/GradientButton";
@@ -6,7 +7,7 @@ import GradientButton from "../components/GradientButton";
 
 const Setting = () => {
   return (
-    <View className="flex-1 bg-white">
+    <View className="flex-1 bg-[#F7FAFE]">
       {/* Header */}
       <CommonTitleBox title="Settings" />
 
@@ -15,41 +16,64 @@ const Setting = () => {
         
         {/* Account Section */}
         <View className="my-6 mb-12">
-          <TouchableOpacity className="py-4 flex-row items-center justify-between ">
-            <Text className="text-xl text-black font-nunitosans-semibold tracking-wider">My Profile</Text>
+          <TouchableOpacity className="py-4 flex-row items-center justify-between"
+          onPress={() => router.push("/MyAccountScreen")}
+          >
+            <Text className="text-xl text-black font-nunitosans-semibold tracking-wider">My Account</Text>
             <Ionicons name="chevron-forward" size={20} color="#6b7280" />
           </TouchableOpacity>
-          <TouchableOpacity className="py-4 flex-row items-center justify-between ">
+          <TouchableOpacity className="py-4 flex-row items-center justify-between "
+          onPress={() => router.push("/NotificationReminderScreen")}
+          >
             <Text className="text-xl text-black font-nunitosans-semibold tracking-wider">Notifications Reminders</Text>
             <Ionicons name="chevron-forward" size={20} color="#6b7280" />
           </TouchableOpacity>
-          <TouchableOpacity className="py-4 border-b border-gray-200 pb-12 flex-row items-center justify-between ">
-            <Text className="text-xl text-black font-nunitosans-semibold tracking-wider">Language</Text>
+          <TouchableOpacity className="py-4 pb-12 flex-row items-center justify-between "
+          onPress={() => router.push("/AppSettingsScreen")}
+          >
+            <Text className="text-xl text-black font-nunitosans-semibold tracking-wider">App Settings</Text>
             <Ionicons name="chevron-forward" size={20} color="#6b7280" />
           </TouchableOpacity>
         </View>
 
         {/* Support Section */}
         <View className="mb-6">
-          <Text className="text-3xl font-nunitosans-extrabold text-[#0077B6] mb-4 tracking-wider">Support</Text>
-          <TouchableOpacity className="py-4 flex-row items-center justify-between">
-            <Text className="text-xl text-black font-nunitosans-semibold tracking-wider">Help Desk</Text>
+          <Text className="text-2xl font-nunitosans-extrabold text-[#0077B6] mb-4 pb-3 tracking-wider border-b border-[#0077B6]/20">Help and Policies</Text>
+          <TouchableOpacity className="py-4 flex-row items-center justify-between"
+          onPress={() => router.push("/FaqScreen")}
+          >
+            <Text className="text-xl text-black font-nunitosans-semibold tracking-wider">FAQs</Text>
             <Ionicons name="chevron-forward" size={20} color="#6b7280" />
           </TouchableOpacity>
-          <TouchableOpacity className="py-4 flex-row items-center justify-between">
-            <Text className="text-xl text-black font-nunitosans-semibold tracking-wider">FAQ</Text>
+          <TouchableOpacity className="py-4 flex-row items-center justify-between"
+          onPress={() => router.push("/ContactUsScreen")}
+          >
+            <Text className="text-xl text-black font-nunitosans-semibold tracking-wider">Contact us</Text>
             <Ionicons name="chevron-forward" size={20} color="#6b7280" />
           </TouchableOpacity>
-          <TouchableOpacity className="py-4 flex-row items-center justify-between">
-            <Text className="text-xl text-black font-nunitosans-semibold tracking-wider">Privacy Policy</Text>
-            <Ionicons name="chevron-forward" size={20} color="#6b7280" />
-          </TouchableOpacity>
-          <TouchableOpacity className="py-4 flex-row items-center justify-between">
+          <TouchableOpacity className="py-4 flex-row items-center justify-between"
+          onPress={() => router.push("/TermsAndConditionsScreen")}
+          >
             <Text className="text-xl text-black font-nunitosans-semibold tracking-wider">Terms & Conditions</Text>
             <Ionicons name="chevron-forward" size={20} color="#6b7280" />
           </TouchableOpacity>
-          <TouchableOpacity className="py-4 flex-row items-center justify-between">
-            <Text className="text-xl text-black font-nunitosans-semibold tracking-wider">Contact US</Text>
+          <TouchableOpacity className="py-4 flex-row items-center justify-between"
+          onPress={() => router.push("/HelpAndSupportScreen")}
+          >
+            <Text className="text-xl text-black font-nunitosans-semibold tracking-wider">Help and Support</Text>
+            <Ionicons name="chevron-forward" size={20} color="#6b7280" />
+          </TouchableOpacity>
+          <TouchableOpacity className="py-4 flex-row items-center justify-between"
+          onPress={() => router.push("/ReferralScreen")}
+          >
+            <Text className="text-xl text-black font-nunitosans-semibold tracking-wider">Refferral</Text>
+            <Ionicons name="chevron-forward" size={20} color="#6b7280" />
+          </TouchableOpacity>
+          
+          <TouchableOpacity className="py-4 flex-row items-center justify-between"
+          onPress={() => router.push("/AboutScreen")}
+          >
+            <Text className="text-xl text-black font-nunitosans-semibold tracking-wider">About</Text>
             <Ionicons name="chevron-forward" size={20} color="#6b7280" />
           </TouchableOpacity>
         </View>

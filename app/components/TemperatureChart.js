@@ -64,7 +64,7 @@ const TemperatureChart = () => {
           pointerConfig={{
             pointerStripColor: "#EC4899",
             pointerStripWidth: 3,
-            pointerStripHeight: 100,
+            pointerStripHeight: 120,
             strokeDashArray: [2, 4],
             pointerColor: "#EC4899",
             radius: 5,

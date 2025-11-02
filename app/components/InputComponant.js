@@ -1,6 +1,6 @@
 import { Text, TextInput, View } from 'react-native'
 
-const InputComponant = ({label = "", value = "", placeholder = "", onChangeText = "", editable = true, note = "", keyboardType = "", className=""}) => {
+const InputComponant = ({label = "", value = "", placeholder = "", onChangeText = "", editable = true, note = "", keyboardType = "", className="", multiline=false, numberOfLines=1}) => {
   return (
     <View>
         <Text className="text-[#161616]/70 font-nunitosans-regular text-lg mb-2">{label}
@@ -9,7 +9,7 @@ const InputComponant = ({label = "", value = "", placeholder = "", onChangeText 
         ) : null}
         </Text>
         <TextInput
-            className={`border border-[#BDE0E6] rounded-xl px-6 mb-6 text-xl h-14 py-2 font-nunitosans-regular text-[#5B5B5B] ${className} ${
+            className={`border border-[#BDE0E6] rounded-xl px-6 mb-6 text-xl py-4 font-nunitosans-regular text-[#5B5B5B] ${className} ${
                 editable ? 'bg-white' : 'bg-[#FFFFFF]/20'
             }`}
             value={value}
@@ -17,6 +17,8 @@ const InputComponant = ({label = "", value = "", placeholder = "", onChangeText 
             placeholder={placeholder}
             editable = {editable}
             keyboardType = {keyboardType}
+            multiline={multiline}
+            numberOfLines={numberOfLines}
             style={{
                 elevation: 3,
                 shadowColor: "#379ADC",
